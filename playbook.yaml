@@ -1,4 +1,9 @@
 ---
 - hosts: demo
   become: yes
-  
+  tasks:
+   - name: install a package
+     package:
+       name: apache2
+       state: present
+       
